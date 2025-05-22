@@ -4,9 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace Ecommerce.Shared.Enums
 {
-    class UserType
+    public class UserType
     {
+        Admin,
+        User
     }
 }

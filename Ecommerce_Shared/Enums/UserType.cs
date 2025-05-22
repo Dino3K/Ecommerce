@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Ecommerce.Shared.Enums
 {
-    public class UserType
+    public enum UserType
     {
         Admin,
         User

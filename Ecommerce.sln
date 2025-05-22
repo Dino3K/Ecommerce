@@ -8,6 +8,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ecommerce.API", "Ecommerce.API\Ecommerce.API.csproj", "{AF15E9E9-0952-41CA-9ED4-3EEFF523AFC0}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ecommerce.Mobile", "Ecommerce.Mobile\Ecommerce.Mobile.csproj", "{54B28946-92C1-4222-996F-BC585642285A}"
+	ProjectSection(ProjectDependencies) = postProject
+		{AF15E9E9-0952-41CA-9ED4-3EEFF523AFC0} = {AF15E9E9-0952-41CA-9ED4-3EEFF523AFC0}
+		{CA569B2C-D325-4FBF-A038-D9A409AA99C2} = {CA569B2C-D325-4FBF-A038-D9A409AA99C2}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

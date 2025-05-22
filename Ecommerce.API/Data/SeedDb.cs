@@ -17,14 +17,17 @@ namespace Ecommerce.API.Data
             await CheckCountriesAsync();
         }
 
-            private async Task CheckCountriesAsync()
+        private async Task CheckCountriesAsync()
         {
 
             {
-                _context.Countries.Add(new Country
+
+                if (!_context.Countries.Any())
                 {
-                    Name = "Colombia",
-                    States = new List<State>()
+                    _context.Countries.Add(new Country
+                    {
+                        Name = "Colombia",
+                        States = new List<State>()
             {
                 new State()
                 {
@@ -49,11 +52,11 @@ namespace Ecommerce.API.Data
                     }
                 },
             }
-                });
-                _context.Countries.Add(new Country
-                {
-                    Name = "Estados Unidos",
-                    States = new List<State>()
+                    });
+                    _context.Countries.Add(new Country
+                    {
+                        Name = "Estados Unidos",
+                        States = new List<State>()
             {
                 new State()
                 {
@@ -78,11 +81,12 @@ namespace Ecommerce.API.Data
                     }
                 },
             }
-                });
-            }
+                    });
+                }
 
-            await _context.SaveChangesAsync();
+                await _context.SaveChangesAsync();
+            }
         }
     }
-    }
+}
 
